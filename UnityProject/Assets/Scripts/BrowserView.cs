@@ -102,7 +102,16 @@ public class BrowserView : MonoBehaviour
     {
         if (UrlInputField.text == "")
         {
-            LoadURL("google.com");
+            string urlScheme = "jar:file://";
+            string apkPath = Application.dataPath;
+            // string apkPath = WebUtility.UrlEncode(Application.dataPath);
+            string separator = "!/Assets/";
+            string entry = "B2 rev 18FEB21.pdf";
+            entry = "index.html";
+            string url = urlScheme + apkPath + separator + entry;
+            LoadHTML(url);
+            return;
+            //LoadURL("google.com");
         }
 
         string potentialUrl = UrlInputField.text;
@@ -117,7 +126,6 @@ public class BrowserView : MonoBehaviour
             string searchUrl = "https://www.google.com/search?q=" + encodedSearchString;
             LoadURL(searchUrl);
         }
-
     }
 
         
@@ -137,6 +145,12 @@ public class BrowserView : MonoBehaviour
             LoadURL(url);
     }
 
+    public void LoadHTML(string url)
+    {            
+        SetInputFieldUrl(url);
+        CallAjc("LoadHTML", new object[] {url});
+
+    }
         
     public void LoadURL(string url)
     {            
