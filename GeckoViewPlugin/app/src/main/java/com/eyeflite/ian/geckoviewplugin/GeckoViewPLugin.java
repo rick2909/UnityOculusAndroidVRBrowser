@@ -295,14 +295,24 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
 
     }
 
-
-    public void LoadHTML(final String url) {
+    public void LoadPDF(final String pdf) {
         final Activity a = UnityPlayer.currentActivity;
         a.runOnUiThread(new Runnable() {public void run() {
             if (mWebView == null || mWebView.getSession()==null) {
                 return;
             }
-            mWebView.getSession().loadString(url, "text/html");
+            mWebView.getSession().load(new GeckoSession.Loader().data(pdf, "application/pdf"));
+
+        }});
+    }
+
+    public void LoadHTML(final String data) {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {public void run() {
+            if (mWebView == null || mWebView.getSession()==null) {
+                return;
+            }
+            mWebView.getSession().load(new GeckoSession.Loader().data(data, "text/html"));
 
         }});
     }
