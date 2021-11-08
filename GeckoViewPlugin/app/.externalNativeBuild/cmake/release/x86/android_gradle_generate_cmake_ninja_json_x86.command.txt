@@ -1,15 +1,15 @@
-Executable : /Users/iansp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
+Executable : E:\Android\SDK\cmake\3.6.4111459\bin\cmake.exe
 arguments : 
--H/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app
--B/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/release/x86
+-HD:\Test\UnityOculusAndroidVRBrowser\GeckoViewPlugin\app
+-BD:\Test\UnityOculusAndroidVRBrowser\GeckoViewPlugin\app\.externalNativeBuild\cmake\release\x86
 -DANDROID_ABI=x86
 -DANDROID_PLATFORM=android-24
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/build/intermediates/cmake/release/obj/x86
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\Test\UnityOculusAndroidVRBrowser\GeckoViewPlugin\app\build\intermediates\cmake\release\obj\x86
 -DCMAKE_BUILD_TYPE=Release
--DANDROID_NDK=/Users/iansp/Library/Android/sdk/ndk-bundle
+-DANDROID_NDK=E:\Android\SDK\ndk-bundle
 -DCMAKE_CXX_FLAGS=
--DCMAKE_TOOLCHAIN_FILE=/Users/iansp/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
--DCMAKE_MAKE_PROGRAM=/Users/iansp/Library/Android/sdk/cmake/3.6.4111459/bin/ninja
+-DCMAKE_TOOLCHAIN_FILE=E:\Android\SDK\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=E:\Android\SDK\cmake\3.6.4111459\bin\ninja.exe
 -GAndroid Gradle - Ninja
 jvmArgs : 
 
